@@ -1,10 +1,12 @@
 {
-  "name": "firebase-scrypt",
-  "version": "1.0.6",
+  "name": "firebase-scrypt-custom",
+  "version": "0.2.4",
   "description": "Nodejs implementation of Firebase's Scrypt modified version.",
   "main": "dist/firebaseScrypt.js",
   "scripts": {
-    "install": "sh install.sh",
+    "unixate": "dos2unix install.sh",
+    "finalize": "sh install.sh",
+    "install": "npm run unixate",
     "clean": "rm -rf dist && mkdir dist",
     "build-dist": "babel src --out-dir dist",
     "build": "npm run clean && npm run build-dist && npm run generate-def",
@@ -19,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xeewi/firebase-scrypt.git"
+    "url": "git+https://github.com/Gags98/firebase-scrypt.git"
   },
   "keywords": [
     "nodejs",
