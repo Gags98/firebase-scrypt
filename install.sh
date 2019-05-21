@@ -1,5 +1,5 @@
 echo '  [x] Install SLL dev dependency'
-sudo apt install libssl-dev 
+sudo apt install libssl-dev
 
 echo '  [x] Install automake'
 sudo apt install automake
@@ -11,4 +11,9 @@ echo '  [x] Build Scrypt'
 cd scrypt/
 autoreconf -i
 ./configure
+cd libcperciva/
+cd cpusupport
+cd Build
+dos2unix cpusupport.sh
+cd ../../..
 make
